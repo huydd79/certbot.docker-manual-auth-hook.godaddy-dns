@@ -1,5 +1,5 @@
 # Certbot.Docker+GoDaddy.DNS using manual-auth-hook script
-Recently certbot supports manual-auth-hook method that can call a script to update DNS' TXT record for dns authenticator. Detail of these method is explained https://eff-certbot.readthedocs.io/en/stable/using.html#pre-and-post-validation-hooks
+Recently certbot supports manual-auth-hook method that can call a script to update DNS' TXT record for dns authenticator. Detail of these method is explained [here](https://eff-certbot.readthedocs.io/en/stable/using.html#pre-and-post-validation-hooks)
 
 Normaly the authenticator and cleanup script can easily use ```curl``` command to send the REST request to GoDaddy for DNS update/delete. However, for the default certbot docker image, the curl command is not available that make more difficult for the authenticator script to run.
 
