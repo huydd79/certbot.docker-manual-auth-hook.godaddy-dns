@@ -13,14 +13,17 @@ Comments and questions, please send to <huydd79@gmail.com>
 # Usage
 - Generating GoDaddy's api key/secret from https://developer.godaddy.com/keys
 - Creating folder for certbot container running
-  
-```
-mkdir -p /var/lib/letsencrypt
-mkdir -p /etc/letsencrypt
-```
+  ```
+  mkdir -p /var/lib/letsencrypt
+  mkdir -p /etc/letsencrypt
+  ```
 
-- Copying godaddy.ini, authenticator.py and cleanup.py for ```/var/lib/letsencrypt```
 - Updating godaddy.ini file with your domain, key and secret info
+- Copying godaddy.ini, authenticator.py and cleanup.py for ```/var/lib/letsencrypt```
+- Setting executable mode for python files
+  ```
+  chmod +x /var/lib/letsencrypt/*.py
+  ```
 - Making sure your docker/podman machine can connect to GoDaddy's API url: https://api.godaddy.com/v1/domains
 - Running below docker/podman command to execute certbot with test env and getting certificate with dns auto-authentication
 ```
