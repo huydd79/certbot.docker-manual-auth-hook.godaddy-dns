@@ -3,13 +3,12 @@ Recently certbot supports manual-auth-hook method that can call a script to upda
 
 Normaly the authenticator and cleanup script can easily use ```curl``` command to send the REST request to GoDaddy for DNS update/delete. However, for the default certbot docker image, the curl command is not available that make more difficult for the authenticator script to run.
 
-This github project is my python scripts for authenticator and cleanup that can work with original certbot docker so that you will not need to rebuild or adding more component to the default image to make it work.
+This github project contains python scripts for authenticator and cleanup that can work with original certbot docker so that you will not need to rebuild or adding more component to the default image to make it work.
 
 Comments and questions, please send to <huydd79@gmail.com>
 
 # Usage
 - Generating GoDaddy's api key/secret from https://developer.godaddy.com/keys
-  
 - Creating folder for certbot container running
   
 ```
@@ -18,9 +17,7 @@ mkdir -p /etc/letsencrypt
 ```
 
 - Copying godaddy.ini, authenticator.py and cleanup.py for ```/var/lib/letsencrypt```
-  
 - Updating godaddy.ini file with your domain, key and secret info
-  
 - Making sure your docker/podman machine can connect to GoDaddy's API url: https://api.godaddy.com/v1/domains
 - Running below docker/podman command to execute certbot and getting certificate with dns auto-authentication
 ```
