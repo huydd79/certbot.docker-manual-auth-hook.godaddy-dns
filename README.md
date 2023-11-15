@@ -37,6 +37,6 @@ podman run \
     --test-cert \
     -d *.your.domain.com
 ```
-Remove ``` --test-cert``` to execute certbot in production env
+Remove ``` --test-cert``` to execute certbot and getting production certificates
 
 #END#
