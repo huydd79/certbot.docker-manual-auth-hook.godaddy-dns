@@ -1,6 +1,6 @@
 # Certbot.Docker+GoDaddy.DNS Wildcard Domain name 
 
-##using manual-auth-hook script
+## using manual-auth-hook script
 
 Recently certbot supports manual-auth-hook method that can call a script to update DNS' TXT record for dns authenticator. Detail of these method is explained [here](https://eff-certbot.readthedocs.io/en/stable/using.html#pre-and-post-validation-hooks)
 
