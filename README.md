@@ -19,7 +19,7 @@ mkdir -p /etc/letsencrypt
 - Copying godaddy.ini, authenticator.py and cleanup.py for ```/var/lib/letsencrypt```
 - Updating godaddy.ini file with your domain, key and secret info
 - Making sure your docker/podman machine can connect to GoDaddy's API url: https://api.godaddy.com/v1/domains
-- Running below docker/podman command to execute certbot and getting certificate with dns auto-authentication
+- Running below docker/podman command to execute certbot with test env and getting certificate with dns auto-authentication
 ```
 podman run \
     --name certbot \
@@ -34,6 +34,9 @@ podman run \
     --manual-cleanup-hook /var/lib/letsencrypt/cleanup.py \
     --server https://acme-v02.api.letsencrypt.org/directory \
     --email name@your.domain.com \
+    --test-cert \
     -d *.your.domain.com
 ```
-#END
+Remove ``` --test-cert``` to execute certbot in production env
+
+#END#
