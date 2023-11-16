@@ -4,7 +4,7 @@
 # Using API to update GoDaddy DNS txt record for certbot validation
 # Input:
 #       - API key/secret from ini file
-#       - Primary domain from ini file
+#       - Base domain from ini file
 #       - Certbot domain and validation from environment variables
 # Output:
 #       - Write down subdomain file on success
