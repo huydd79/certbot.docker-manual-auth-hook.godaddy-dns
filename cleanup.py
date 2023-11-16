@@ -4,7 +4,7 @@
 # Using API to delete GoDaddy DNS txt record for certbot clean up
 # Input:
 #       - API key/secret from ini file
-#       - Primary domain from ini file
+#       - Base domain from ini file
 #       - Subdomain file existed as cleanup request
 # Output:
 #       - Write down subdomain file on success
